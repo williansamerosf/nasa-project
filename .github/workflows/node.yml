@@ -22,9 +22,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      # Runs Node.js version 17
       - name: Use Node.js version 17
         uses: actions/setup-node@v3
         with:
           node-version: "17"
-        - run: npm install
-        - run: npm run build --prefix client
+      - run: npm install
+      - run: npm run build --prefix client
